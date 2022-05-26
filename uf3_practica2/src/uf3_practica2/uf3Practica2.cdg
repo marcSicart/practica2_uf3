@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="uf3Practica2">
+  <ClassDiagramComponents>
+    <Class name="LLIBRE" package="" visibility="public" xPosition="584.0" yPosition="87.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="tipus" type="String" visibility="private"/>
+        <Field name="editorial" type="String" visibility="private"/>
+        <Field name="any" type="int" visibility="private"/>
+        <Field name="autor" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AUTOR" package="" visibility="public" xPosition="264.0" yPosition="375.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="nacionalitat" type="String" visibility="private"/>
+        <Field name="dataDeNaixement" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="BIBLIOTECA" package="" visibility="public" xPosition="961.0" yPosition="265.0">
+      <Fields>
+        <Field name="cuantitatLlibres" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Copia" package="" visibility="public" xPosition="803.0" yPosition="547.0">
+      <Fields>
+        <Field name="identificador" type="int" visibility="private"/>
+        <Field name="stat" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="LECTOR" package="" visibility="public" xPosition="484.0" yPosition="697.0">
+      <Fields>
+        <Field name="llibresPrestats" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="2" source="LLIBRE" target="BIBLIOTECA" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="3" source="LLIBRE" target="LECTOR" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="1" source="LLIBRE" target="AUTOR" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <IsRelation name="is" source="Copia" target="LLIBRE"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
